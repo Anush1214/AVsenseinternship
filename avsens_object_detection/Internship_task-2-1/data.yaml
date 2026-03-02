@@ -1,0 +1,13 @@
+names:
+- car
+- pedestrian
+nc: 2
+roboflow:
+  license: CC BY 4.0
+  project: internship_task-2
+  url: https://universe.roboflow.com/aryas-workspace-dnu6t/internship_task-2/dataset/1
+  version: 1
+  workspace: aryas-workspace-dnu6t
+test: ../test/images
+train: ../train/images
+val: ../valid/images

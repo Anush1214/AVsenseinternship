@@ -1,8 +1,8 @@
 from ultralytics import YOLO
 
-# -------------------------------
-# Train on COCO dataset
-# -------------------------------
+# ===============================
+# 1. Train on COCO dataset
+# ===============================
 #coco_model = YOLO("yolov8n.pt")
 
 #coco_model.train(
@@ -13,15 +13,29 @@ from ultralytics import YOLO
 #    name="coco_train"
 #)
 
-# -------------------------------
-# Train on Open Images dataset
-# -------------------------------
-oi_model = YOLO("yolov8n.pt")  # NEW instance
+# ===============================
+# 2. Train on Open Images dataset
+# ===============================
+#oi_model = YOLO("yolov8n.pt")
 
-oi_model.train(
-    data="yolo_openimages/data.yaml",
+#oi_model.train(
+#    data="yolo_openimages/data.yaml",
+#    epochs=30,
+#    imgsz=640,
+#    project="runs/detect",
+#    name="openimages_train"
+#)
+
+# ===============================
+# 3. Train on CUSTOM PEDESTRIAN dataset
+# (Internship_task-2-1)
+# ===============================
+custom_model = YOLO("yolov8n.pt")
+
+custom_model.train(
+    data="Internship_task-2-1/data.yaml",
     epochs=30,
     imgsz=640,
     project="runs/detect",
-    name="openimages_train"
+    name="custom_pedestrian_train"
 )
