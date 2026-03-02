@@ -46,9 +46,7 @@ def load_dataset(dataset_name, zoo_name, split, classes=None):
     return view
 
 
-# ==========================
-# NORMALIZE LABELS
-# ==========================
+
 def normalize_labels(view, mapping):
     print(" Normalizing labels...")
     for sample in view:
@@ -148,9 +146,7 @@ names:
     fo.delete_dataset(val_ds.name)
 
 
-# ==========================
-# MAIN
-# ==========================
+
 def main():
     print("\n==============================")
     print(" YOLO DATASET PREPARATION")
@@ -171,7 +167,7 @@ def main():
         "openimages-person-car",
         "open-images-v7",
         "validation",
-        classes=None,   # IMPORTANT: no filtering at load
+        classes=None,   
     )
 
     normalize_labels(oi_view, OPENIMAGES_REMAP)

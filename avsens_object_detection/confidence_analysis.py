@@ -1,8 +1,6 @@
 import pandas as pd
 
-# ==============================
-# COCO RESULTS
-# ==============================
+
 coco_csv = r"D:\AVsenseinternship\avsens_object_detection\runs\detect\runs\detect\coco_train\results.csv"
 coco_df = pd.read_csv(coco_csv)
 
@@ -14,9 +12,6 @@ print("\nRecall per epoch:")
 print(coco_df["metrics/recall(B)"])
 
 
-# ==============================
-# OPEN IMAGES RESULTS
-# ==============================
 oi_csv = r"D:\AVsenseinternship\avsens_object_detection\runs\detect\runs\detect\openimages_train\results.csv"
 oi_df = pd.read_csv(oi_csv)
 

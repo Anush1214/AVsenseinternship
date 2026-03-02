@@ -1,35 +1,28 @@
 from ultralytics import YOLO
 
-# ===============================
-# 1. Train on COCO dataset
-# ===============================
-#coco_model = YOLO("yolov8n.pt")
 
-#coco_model.train(
-#    data="yolo_coco/data.yaml",
-#    epochs=30,
-#    imgsz=640,
-#    project="runs/detect",
-#    name="coco_train"
-#)
+coco_model = YOLO("yolov8n.pt")
 
-# ===============================
-# 2. Train on Open Images dataset
-# ===============================
-#oi_model = YOLO("yolov8n.pt")
+coco_model.train(
+    data="yolo_coco/data.yaml",
+    epochs=30,
+    imgsz=640,
+    project="runs/detect",
+    name="coco_train"
+)
 
-#oi_model.train(
-#    data="yolo_openimages/data.yaml",
-#    epochs=30,
-#    imgsz=640,
-#    project="runs/detect",
-#    name="openimages_train"
-#)
 
-# ===============================
-# 3. Train on CUSTOM PEDESTRIAN dataset
-# (Internship_task-2-1)
-# ===============================
+oi_model = YOLO("yolov8n.pt")
+
+oi_model.train(
+    data="yolo_openimages/data.yaml",
+    epochs=30,
+    imgsz=640,
+    project="runs/detect",
+    name="openimages_train"
+)
+
+
 custom_model = YOLO("yolov8n.pt")
 
 custom_model.train(

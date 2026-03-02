@@ -1,8 +1,6 @@
 from ultralytics import YOLO
 
-# ==================================================
-# COCO EVALUATION
-# ==================================================
+
 COCO_WEIGHTS = r"D:\AVsenseinternship\avsens_object_detection\runs\detect\runs\detect\coco_train\weights\best.pt"
 COCO_DATA = r"D:\AVsenseinternship\avsens_object_detection\yolo_coco\data.yaml"
 
@@ -21,9 +19,7 @@ print("COCO mAP@50:", coco_metrics.box.map50)
 print("COCO mAP@50-95:", coco_metrics.box.map)
 
 
-# ==================================================
-# OPEN IMAGES EVALUATION
-# ==================================================
+
 OPENIMAGES_WEIGHTS = r"D:\AVsenseinternship\avsens_object_detection\runs\detect\runs\detect\openimages_train\weights\best.pt"
 OPENIMAGES_DATA = r"D:\AVsenseinternship\avsens_object_detection\yolo_openimages\data.yaml"
 
@@ -42,9 +38,7 @@ print("OpenImages mAP@50:", oi_metrics.box.map50)
 print("OpenImages mAP@50-95:", oi_metrics.box.map)
 
 
-# ==================================================
-# CUSTOM PEDESTRIAN DATASET EVALUATION (NEW)
-# ==================================================
+
 CUSTOM_WEIGHTS = r"D:\AVsenseinternship\avsens_object_detection\runs\detect\runs\detect\custom_pedestrian_train\weights\best.pt"
 CUSTOM_DATA = r"D:\AVsenseinternship\avsens_object_detection\Internship_task-2-1\data.yaml"
 
